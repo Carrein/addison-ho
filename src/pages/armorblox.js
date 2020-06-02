@@ -4,8 +4,8 @@ import { Text, SubText } from "./index.styled";
 const Armorblox = () => {
   return (
     <>
-      <Text>Full-Stack Engineering Intern</Text>
-      <SubText>California, Summer 2019</SubText>
+      <Text>Software Engineering Intern</Text>
+      <Text>California, Summer 2019</Text>
       <br />
       <SubText>
         My first true startup internship. Here, I worked alongside of the most
@@ -21,7 +21,6 @@ const Armorblox = () => {
       <br />
       <SubText>
         Sometime I struggle with Kubernetes before deferring to the devops team.
-        Ocassionally, Chris drags to me to write back-end code in golang too.
       </SubText>
       <br />
       <SubText>

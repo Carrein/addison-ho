@@ -27,7 +27,7 @@ import {
   WATCH_EVENT,
 } from "../constants/constants";
 
-const renderGithubText = (x) => {
+const renderGithubText = (x, i) => {
   let text = null;
 
   switch (x.type) {
@@ -37,9 +37,17 @@ const renderGithubText = (x) => {
       text = x.action || "Commented";
       break;
     case WATCH_EVENT:
-      text = x.action || "Watched";
+      text = x.action || "Carefully watched";
       break;
     case CREATE_EVENT:
+      if (x?.payload?.ref_type === "branch") {
+        text = "Created branch";
+        break;
+      }
+      if (x?.payload?.ref_type === "repository") {
+        text = "Created repository";
+        break;
+      }
       text = x.action || "Created";
       break;
     case DELETE_EVENT:
@@ -77,12 +85,12 @@ const renderGithubText = (x) => {
   }
 
   return (
-    <TextWrapper>
+    <TextWrapper key={i + x + "_key"}>
+      <IconWrapper>
+        <ChevronRight />
+      </IconWrapper>
+      <SubText>{text + " "}</SubText>
       <CaretTextWrapper href={x.repo.url}>
-        <IconWrapper>
-          <ChevronRight />
-        </IconWrapper>
-        <SubText>{text + " "}</SubText>
         <SubText>{x.repo.name}</SubText>
       </CaretTextWrapper>
     </TextWrapper>
@@ -103,7 +111,7 @@ const Activity = () => {
     return <Spinner />;
   }
 
-  return <>{activity && activity.map((x) => renderGithubText(x))}</>;
+  return <>{activity && activity.map((x, i) => renderGithubText(x, i))}</>;
 };
 
 export default Activity;

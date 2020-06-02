@@ -1,6 +1,5 @@
 import styled, { keyframes } from "styled-components";
 import Download from "../assets/download.svg";
-import Card from "../assets/card.svg";
 
 export const animation = keyframes`
  0% { cursor: url("frame1.gif"), auto; }
@@ -18,7 +17,6 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 25px;
   cursor: url("frame1.gif"), auto;
 `;
 
@@ -30,6 +28,9 @@ export const Body = styled.div`
   border: 2px solid #0c55e8;
   display: flex;
   flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Hero = styled.span`
@@ -38,28 +39,47 @@ export const Hero = styled.span`
   font-family: Jost;
   font-weight: 600;
   color: #0c55e8;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 export const RightSection = styled.div`
   display: flex;
-  flex-basis: 50%;
+  flex-basis: 35%;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   direction: rtl;
-  padding: 0 40px 0 0;
+  padding: 40px;
   border-right: 1px solid #0c55e8;
+
+  @media (max-width: 768px) {
+    flex-basis: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-right: 0;
+    border-bottom: 1px solid #0c55e8;
+  }
 `;
 
 export const LeftSection = styled.div`
   display: flex;
   flex-direction: column;
-  flex-basis: 50%;
+  flex-basis: 65%;
   align-items: flex-start;
   justify-content: center;
-  padding: 0 40px 0 40px;
+  padding: 40px;
   border-left: 1px solid #0c55e8;
   overflow: auto;
+
+  @media (max-width: 768px) {
+    justify-content: normal;
+    padding: 30px;
+    border-left: 0;
+    border-top: 1px solid #0c55e8;
+  }
 `;
 
 export const Highlight = styled.div`
@@ -73,8 +93,17 @@ export const Highlight = styled.div`
 export const HeroWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   margin: 20px 0;
+  @media (max-width: 768px) {
+    margin: 20px auto 20px 20px;
+    align-items: flex-end;
+  }
   & > div {
+    @media (max-width: 768px) {
+      width: ${(props) => (props.hover ? "100%" : "0")};
+      height: 2px;
+    }
     width: ${(props) => (props.hover ? "100%" : "0")};
     transition-timing-function: ease-in-out;
     transition: width 0.5s;
@@ -89,6 +118,9 @@ export const TopLeftCircle = styled.div`
   top: 40px;
   left: 40px;
   background-color: #0c55e8;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const TopRightCircle = styled(TopLeftCircle)`
@@ -108,8 +140,11 @@ export const BottomRightCircle = styled(TopLeftCircle)`
   bottom: 40px;
 `;
 
-export const Text = styled(Hero)`
+export const Text = styled.span`
   font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: Jost;
+  color: #0c55e8;
   font-weight: 400;
 `;
 
@@ -149,14 +184,9 @@ export const StyledDownload = styled(Download)`
   path {
     fill: #0c55e8;
   }
-`;
-
-export const StyledCard = styled(Card)`
-  height: 30px;
-  width: 30px;
-  margin-right: 5px;
-  path {
-    fill: #0c55e8;
+  @media (max-width: 768px) {
+    height: 16px;
+    width: 16px;
   }
 `;
 
@@ -173,10 +203,12 @@ export const TextWrapper = styled.div`
   justify-content: center;
 `;
 
-export const SubText = styled(Hero)`
+export const SubText = styled.span`
   font-size: 1rem;
   font-weight: 400;
   white-space: pre-wrap;
+  font-family: Jost;
+  color: #0c55e8;
 `;
 
 export const StyledImg = styled.img`
@@ -215,4 +247,9 @@ export const Spinner = styled.div`
   width: 24px;
   height: 24px;
   border-radius: 50%;
+`;
+
+export const StyledImage = styled.img`
+  max-height: 400px;
+  border: 2px solid #0c55e8;
 `;

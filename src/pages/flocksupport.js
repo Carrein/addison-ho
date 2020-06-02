@@ -1,32 +1,29 @@
 import React from "react";
-import { Text, SubText } from "./index.styled";
+import { Text, SubText, CaretTextWrapper, TextWrapper } from "./index.styled";
 
 const FlockSupport = () => {
   return (
     <>
-      <Text>Software Engineering Intern</Text>
-      <SubText>Singapore, Spring 2020</SubText>
+      <Text>Employee</Text>
+      <Text>Singapore, Summer 2020</Text>
       <br />
       <SubText>
-        After I was deported back to Singapore from the US, I started a new
-        internship at FlockSupport, a remote work collaboration tool.
+        FlockSupport is a new take on Software as a Service for customer support
+        needs. It aims to ease the difficulties customers face when seeking
+        after-sales service from businesses.
       </SubText>
       <br />
       <SubText>
-        FlockSupport's architecture was mostly in Javascript, most of my work is
-        centered on the front-end with React, Gatsby and GraphQL.
+        FlockSupport is currently in development and is slated for test drive
+        year end 2020.
       </SubText>
       <br />
-      <SubText>
-        Here, I spend most of my working hours aligning divs, writing queries,
-        designing components in Figma and writing product specifications I'm
-        pretty sure no one reads.
-      </SubText>
-      <br />
-      <SubText>
-        Fun Fact: Because of the lockdown, I have never actually met any of my
-        coworkers in person before.
-      </SubText>
+      <TextWrapper>
+        <SubText>Check it out at </SubText>
+        <CaretTextWrapper href="https://www.flocksupport.com">
+          <SubText>flocksupport.com</SubText>
+        </CaretTextWrapper>
+      </TextWrapper>
     </>
   );
 };

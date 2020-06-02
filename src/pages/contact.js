@@ -1,25 +1,33 @@
 import React from "react";
 
-import { Text, Caret, CaretTextWrapper, StyledDownload } from "./index.styled";
+import {
+  Text,
+  SubText,
+  Caret,
+  CaretTextWrapper,
+  StyledDownload,
+} from "./index.styled";
 
 const Contact = () => {
   return (
     <>
+      <Text>Stalk me here.</Text>
+      <br />
       <CaretTextWrapper href="https://www.github.com/carrein">
-        <Text>Github</Text>
+        <SubText>Github</SubText>
         <Caret />
       </CaretTextWrapper>
       <CaretTextWrapper href="https://www.linkedin.com/in/addison-ho-ab284619b/">
-        <Text>LinkedIn</Text>
+        <SubText>LinkedIn</SubText>
         <Caret />
       </CaretTextWrapper>
       <CaretTextWrapper href="../../CV.pdf" download>
-        <Text>CV</Text>
+        <SubText>CV</SubText>
         <StyledDownload />
         <Caret />
       </CaretTextWrapper>
       <CaretTextWrapper href="mailto:addisonho@outlook.com">
-        <Text>addisonho@outlook.com</Text>
+        <SubText>addisonho@outlook.com</SubText>
         <Caret />
       </CaretTextWrapper>
     </>

@@ -1,11 +1,12 @@
 import React from "react";
-import { Text, SubText } from "./index.styled";
+import { Text, SubText, StyledImage } from "./index.styled";
 
 const Taskade = () => {
   return (
     <>
+      <StyledImage src="taskade.png" />
       <Text>Software Engineering Intern</Text>
-      <SubText>Singapore, Spring 2020</SubText>
+      <Text>Singapore, Spring 2020</Text>
       <br />
       <SubText>
         After I was deported back to Singapore from the US, I started a new
@@ -18,13 +19,13 @@ const Taskade = () => {
       </SubText>
       <br />
       <SubText>
-        Here, I spend most of my working hours aligning divs, writing queries,
-        designing components in Figma and writing product specifications I'm
-        pretty sure no one reads.
+        Here, I spend most of my working hours aligning {"<div/>"}, writing
+        queries, designing components in Figma and writing product
+        specifications I'm pretty sure no one reads.
       </SubText>
       <br />
       <SubText>
-        Fun Fact: Because of the lockdown, I have never actually met any of my
+        Fun fact: Because of the lockdown, I have never actually met any of my
         coworkers in person before.
       </SubText>
     </>
