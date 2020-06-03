@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, SubText, TextWrapper } from "./index.styled";
+import { Text, SubText, TextWrapper } from "../styles/index.styled";
 
 const Education = () => {
   return (

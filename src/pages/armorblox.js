@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, SubText } from "./index.styled";
+import { Text, SubText } from "../styles/index.styled";
 
 const Armorblox = () => {
   return (

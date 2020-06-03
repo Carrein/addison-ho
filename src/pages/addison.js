@@ -1,7 +1,7 @@
 import React from "react";
 import Activity from "./activity";
 
-import { Text, SubText } from "./index.styled";
+import { Text, SubText } from "../styles/index.styled";
 
 const Addison = () => {
   return (

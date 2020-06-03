@@ -1,9 +1,16 @@
 import React from "react";
-import { Text, SubText, CaretTextWrapper, TextWrapper } from "./index.styled";
+import {
+  Text,
+  SubText,
+  CaretTextWrapper,
+  TextWrapper,
+  StyledFlockSupport,
+} from "../styles/index.styled";
 
 const FlockSupport = () => {
   return (
     <>
+      <StyledFlockSupport />
       <Text>Employee</Text>
       <Text>Singapore, Summer 2020</Text>
       <br />

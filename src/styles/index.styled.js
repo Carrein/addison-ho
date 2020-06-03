@@ -1,5 +1,12 @@
-import styled, { keyframes } from "styled-components";
+import styled, { createGlobalStyle, keyframes } from "styled-components";
 import Download from "../assets/download.svg";
+import FlockSupport from "../assets/flocksupport.svg";
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+  }
+`;
 
 export const animation = keyframes`
  0% { cursor: url("frame1.gif"), auto; }
@@ -211,11 +218,6 @@ export const SubText = styled.span`
   color: #0c55e8;
 `;
 
-export const StyledImg = styled.img`
-  height: 200px;
-  width: 200px;
-`;
-
 export const IconWrapper = styled.div`
   display: flex;
   margin-right: 5px;
@@ -251,5 +253,13 @@ export const Spinner = styled.div`
 
 export const StyledImage = styled.img`
   max-height: 400px;
+  max-width: 100%;
   border: 2px solid #0c55e8;
+  margin-bottom: 20px;
+`;
+
+export const StyledFlockSupport = styled(FlockSupport)`
+  max-height: 140px;
+  max-width: 140px;
+  margin-bottom: 20px;
 `;

@@ -5,7 +5,7 @@ import {
   IconWrapper,
   CaretTextWrapper,
   Spinner,
-} from "./index.styled";
+} from "../styles/index.styled";
 
 import ChevronRight from "../assets/chevron-right.svg";
 
@@ -72,7 +72,7 @@ const renderGithubText = (x, i) => {
       text = x.action || "Pulled";
       break;
     case PUSH_EVENT:
-      text = x.action || "Pushed";
+      text = x.action || "Pushed something to";
       break;
     case RELEASE_EVENT:
       text = x.action || "Released";
@@ -84,13 +84,15 @@ const renderGithubText = (x, i) => {
       text = null;
   }
 
+  const url = "https://github.com/" + x.repo.name;
+
   return (
     <TextWrapper key={i + x + "_key"}>
       <IconWrapper>
         <ChevronRight />
       </IconWrapper>
       <SubText>{text + " "}</SubText>
-      <CaretTextWrapper href={x.repo.url}>
+      <CaretTextWrapper href={url}>
         <SubText>{x.repo.name}</SubText>
       </CaretTextWrapper>
     </TextWrapper>
@@ -101,10 +103,10 @@ const Activity = () => {
   const [activity, setActivity] = useState(0);
   useEffect(() => {
     fetch(`https://api.github.com/users/carrein/events`)
-      .then((response) => response.json()) // parse JSON from request
+      .then((response) => response.json())
       .then((resultData) => {
         setActivity(resultData.slice(0, 4));
-      }); // set data for the number of stars
+      });
   }, []);
 
   if (!activity) {

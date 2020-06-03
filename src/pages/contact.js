@@ -6,7 +6,7 @@ import {
   Caret,
   CaretTextWrapper,
   StyledDownload,
-} from "./index.styled";
+} from "../styles/index.styled";
 
 const Contact = () => {
   return (

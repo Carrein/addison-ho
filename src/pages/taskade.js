@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, SubText, StyledImage } from "./index.styled";
+import { Text, SubText, StyledImage } from "../styles/index.styled";
 
 const Taskade = () => {
   return (

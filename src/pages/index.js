@@ -19,7 +19,8 @@ import {
   TopRightCircle,
   RightSection,
   LeftSection,
-} from "./index.styled";
+  GlobalStyle,
+} from "../styles/index.styled";
 
 const IndexPage = () => {
   const [hover, setHover] = useState("addison");
@@ -43,6 +44,7 @@ const IndexPage = () => {
 
   return (
     <Container>
+      <GlobalStyle />
       <Body>
         <TopLeftCircle />
         <TopRightCircle />
