@@ -13,14 +13,21 @@ export const animation = keyframes`
  100% { cursor: url("frame2.gif"), auto; }
 `;
 
+export const Border = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 1000px;
+  top: -1000px;
+`;
+
 export const Container = styled.div`
   background-size: 8px;
   background-color: #ffe6f2;
   background-repeat: repeat;
   background-position: center;
   background-image: url("tile.svg");
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,7 +213,7 @@ export const Placeholder = styled.div`
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 `;
 
@@ -223,6 +230,7 @@ export const IconWrapper = styled.div`
   margin-right: 5px;
   height: 16px;
   width: 16px;
+  margin-top: 3px;
   svg > path {
     fill: #0c55e8;
   }
@@ -262,4 +270,15 @@ export const StyledFlockSupport = styled(FlockSupport)`
   max-height: 140px;
   max-width: 140px;
   margin-bottom: 20px;
+`;
+
+export const StyledActivityTextWrapper = styled.div`
+  display: flex;
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
+`;
+
+export const ActivityTextWrapper = styled(CaretTextWrapper)`
+  justify-content: flex-start;
 `;

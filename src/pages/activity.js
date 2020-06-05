@@ -3,8 +3,9 @@ import {
   SubText,
   TextWrapper,
   IconWrapper,
-  CaretTextWrapper,
   Spinner,
+  StyledActivityTextWrapper,
+  ActivityTextWrapper,
 } from "../styles/index.styled";
 
 import ChevronRight from "../assets/chevron-right.svg";
@@ -91,10 +92,12 @@ const renderGithubText = (x, i) => {
       <IconWrapper>
         <ChevronRight />
       </IconWrapper>
-      <SubText>{text + " "}</SubText>
-      <CaretTextWrapper href={url}>
-        <SubText>{x.repo.name}</SubText>
-      </CaretTextWrapper>
+      <StyledActivityTextWrapper>
+        <SubText>{text + " "}</SubText>
+        <ActivityTextWrapper href={url}>
+          <SubText>{x.repo.name}</SubText>
+        </ActivityTextWrapper>
+      </StyledActivityTextWrapper>
     </TextWrapper>
   );
 };

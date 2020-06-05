@@ -4,7 +4,7 @@ import { Text, SubText, StyledImage } from "../styles/index.styled";
 const Taskade = () => {
   return (
     <>
-      <StyledImage src="taskade.png" />
+      <StyledImage src="taskade.jpg" />
       <Text>Software Engineering Intern</Text>
       <Text>Singapore, Spring 2020</Text>
       <br />

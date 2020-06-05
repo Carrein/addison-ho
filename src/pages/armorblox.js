@@ -1,9 +1,10 @@
 import React from "react";
-import { Text, SubText } from "../styles/index.styled";
+import { Text, SubText, StyledImage } from "../styles/index.styled";
 
 const Armorblox = () => {
   return (
     <>
+      <StyledImage src="armorblox.jpg" />
       <Text>Software Engineering Intern</Text>
       <Text>California, Summer 2019</Text>
       <br />

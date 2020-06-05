@@ -35,12 +35,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Addison`,
+        short_name: `Addison`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        icon: "src/assets/favicon.svg",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
