@@ -61,7 +61,7 @@ const renderGithubText = (x, i) => {
       text = x.action || "Published";
       break;
     case ISSUES_EVENT:
-      text = x.action || "Issued";
+      text = x.action || "Opened an issue at";
       break;
     case MEMBER_EVENT:
       text = x.action || "Invited";
@@ -108,7 +108,7 @@ const Activity = () => {
     fetch(`https://api.github.com/users/carrein/events`)
       .then((response) => response.json())
       .then((resultData) => {
-        setActivity(resultData.slice(0, 4));
+        setActivity(resultData.slice(0, 10));
       });
   }, []);
 

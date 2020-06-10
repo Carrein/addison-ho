@@ -1,10 +1,11 @@
 import styled, { createGlobalStyle, keyframes } from "styled-components";
 import Download from "../assets/download.svg";
-import FlockSupport from "../assets/flocksupport.svg";
+import FlockSupport from "../assets/flocksupport_emblem.svg";
 
 export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
+    overflow: hidden;
   }
 `;
 
